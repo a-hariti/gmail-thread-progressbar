@@ -1,14 +1,23 @@
 # Gmail Progress Bar Extension
 
-A Chrome extension that enhances Gmail by adding a visual progress bar to email conversations, helping users track their position within email threads.
+A Chrome extension that adds a sleek progress bar to Gmail conversations, helping you track your position while reading through email threads.
 
 ## Features
 
-- Visual progress bar showing current position in email threads
-- Email count indicator (e.g., "Email 3 of 10")
-- Seamless integration with Gmail's interface
-- Real-time updates as you scroll through conversations
-- Lightweight and performant
+- Clean and minimal progress bar that matches Gmail's design
+- Automatically appears only in email threads
+- Updates smoothly as you scroll through conversations
+- Integrates seamlessly with Gmail's interface
+- Lightweight with minimal performance impact
+- Works with expanded/collapsed emails
+
+## How it Works
+
+The extension adds a thin progress bar at the top of Gmail threads that:
+- Mirrors the scroll position of the conversation
+- Shows your current position in the thread
+- Updates in real-time as you scroll
+- Automatically appears/disappears when entering/leaving threads
 
 ## Installation
 
@@ -18,19 +27,19 @@ A Chrome extension that enhances Gmail by adding a visual progress bar to email 
 4. Click "Load unpacked" and select the extension directory
 5. The extension will automatically activate when you visit Gmail
 
-## Usage
+## Technical Details
 
-1. Open Gmail in Chrome
-2. Navigate to any email conversation with multiple messages
-3. A progress bar will appear at the top of the page
-4. As you scroll through the conversation, the progress bar and count will update automatically
+The extension uses:
+- MutationObserver to detect thread navigation
+- Scroll event listeners to track reading progress
+- Gmail's native scroll container for accurate position tracking
+- Clean ES6+ JavaScript with no external dependencies
 
-## Development
+## Files
 
-The extension consists of three main files:
-- `manifest.json`: Extension configuration
-- `content.js`: Core functionality for tracking and displaying progress
-- `styles.css`: Styling for the progress bar
+- `manifest.json`: Extension configuration and permissions
+- `content.js`: Core functionality for progress tracking
+- `styles.css`: Minimal CSS for the progress bar
 
 ## Requirements
 
@@ -40,5 +49,5 @@ The extension consists of three main files:
 ## Notes
 
 - The extension only activates on mail.google.com
-- Requires "activeTab" permission to function
-- Compatible with the latest version of Chrome and Gmail's interface
+- Requires minimal permissions (only access to Gmail)
+- Designed to be lightweight and non-intrusive
