@@ -1,0 +1,27 @@
+.gmail-progress-container {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-color: #f1f3f4;
+    z-index: 9999;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.gmail-progress-bar {
+    height: 100%;
+    background-color: #1a73e8;
+    transition: width 0.3s ease-in-out;
+    width: 0;
+}
+
+.gmail-progress-text {
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    font-size: 13px;
+    color: #5f6368;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    font-weight: 500;
+}

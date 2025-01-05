@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Progress Bar",
+  "version": "1.0",
+  "description": "Adds a visual progress bar to Gmail conversations to track your position in email threads",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
